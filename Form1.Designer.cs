@@ -35,12 +35,11 @@
             this.pbxNext = new System.Windows.Forms.PictureBox();
             this.pbxHome = new System.Windows.Forms.PictureBox();
             this.txtBuscador = new System.Windows.Forms.TextBox();
-            this.pbxBuscar = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRecargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -60,6 +59,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxBack.TabIndex = 2;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // pbxRecargar
             // 
@@ -70,6 +70,7 @@
             this.pbxRecargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxRecargar.TabIndex = 3;
             this.pbxRecargar.TabStop = false;
+            this.pbxRecargar.Click += new System.EventHandler(this.pbxRecargar_Click);
             // 
             // pbxNext
             // 
@@ -80,6 +81,7 @@
             this.pbxNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxNext.TabIndex = 4;
             this.pbxNext.TabStop = false;
+            this.pbxNext.Click += new System.EventHandler(this.pbxNext_Click);
             // 
             // pbxHome
             // 
@@ -90,6 +92,7 @@
             this.pbxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxHome.TabIndex = 6;
             this.pbxHome.TabStop = false;
+            this.pbxHome.Click += new System.EventHandler(this.pbxHome_Click);
             // 
             // txtBuscador
             // 
@@ -97,23 +100,24 @@
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.Size = new System.Drawing.Size(511, 22);
             this.txtBuscador.TabIndex = 7;
+            this.txtBuscador.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscador_KeyDown);
             // 
-            // pbxBuscar
+            // btnBuscar
             // 
-            this.pbxBuscar.Image = ((System.Drawing.Image)(resources.GetObject("pbxBuscar.Image")));
-            this.pbxBuscar.Location = new System.Drawing.Point(742, 12);
-            this.pbxBuscar.Name = "pbxBuscar";
-            this.pbxBuscar.Size = new System.Drawing.Size(46, 29);
-            this.pbxBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxBuscar.TabIndex = 8;
-            this.pbxBuscar.TabStop = false;
+            this.btnBuscar.Location = new System.Drawing.Point(737, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(57, 25);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Go";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pbxBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.pbxHome);
             this.Controls.Add(this.pbxNext);
@@ -121,12 +125,12 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.webBrowser1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRecargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +144,7 @@
         private System.Windows.Forms.PictureBox pbxNext;
         private System.Windows.Forms.PictureBox pbxHome;
         private System.Windows.Forms.TextBox txtBuscador;
-        private System.Windows.Forms.PictureBox pbxBuscar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 
